@@ -22,7 +22,7 @@
       </div> -->
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
+      <!-- <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <li class="nav-item">
             @if($menu == 'dashboard')
@@ -35,132 +35,62 @@
               Dashboard
               </p>
             </a>
-          </li>
-          <!-- <li class="nav-item has-treeview menu-open">
-            @if($menu == 'barang')
-              <a href="#" class="nav-link active">
-            @else
-              <a href="#" class="nav-link">
-            @endif  
-            <i class="fas fa-bars nav-icon"></i>
-              <p>
-                Barang  
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                @if($submenu == 'view_barang')
-                  <a href="/view_barang" class="nav-link active">
-                @else
-                  <a href="/view_barang" class="nav-link">
-                @endif
-                <i class="fas fa-archive nav-icon"></i>
-                  <p>Barang Pakai Habis</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                @if($submenu == 'view_rencana_pengadaan')
-                  <a href="/view_rencana_pengadaan" class="nav-link active">
-                @else
-                  <a href="/view_rencana_pengadaan" class="nav-link">
-                @endif
-                <i class="fas fa-shopping-cart nav-icon"></i>
-                  <p>Rencana Pengadaan</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                @if($submenu == 'view_pengadaan')
-                  <a href="/view_pengadaan" class="nav-link active">
-                @else
-                  <a href="/view_pengadaan" class="nav-link">
-                @endif
-                <i class="fas fa-cart-plus nav-icon"></i>
-                  <p>Pengadaan Barang</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                @if($submenu == 'view_permintaan') 
-                  <a href="/view_permintaan" class="nav-link active">
-                @else
-                  <a href="/view_permintaan" class="nav-link">
-                @endif
-                <i class="fas fa-cart-arrow-down nav-icon"></i>
-                  <p>Permintaan Barang</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview menu-open">
-            @if($menu == 'inventaris')
-              <a href="#" class="nav-link active">
-            @else
-              <a href="#" class="nav-link">
-            @endif  
-            <i class="fas fa-bars nav-icon"></i>
-              <p>
-                Inventaris
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
+          </li> -->
+
+          <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <li class="nav-item">
+          @if($menu == 'customer')
+          <a href="/customer" class="nav-link active">
+          @else
+          <a href="/customer" class="nav-link">
+          @endif
+          <i class="nav-icon fas fa-users"></i>
+            <p>
+              Customer
+            </p>
+          </a>
+        </li>
+
+
+        @if($menu == 'MasterTambahData')
+        <li class="nav-item has-treeview menu-open">
+          <a href="#" class="nav-link active">
+        @else
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
+        @endif
+            <i class="nav-icon far fa-plus-square"></i>
+            <p>
+              Pembayaran
+              <i class="fas fa-angle-left right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
             <li class="nav-item">
-                @if($submenu == 'view_inventaris')
-                  <a href="/view_inventaris" class="nav-link active">
-                @else
-                  <a href="/view_inventaris" class="nav-link">
-                @endif
-                <i class="fas fa-boxes nav-icon"></i>
-                  <p>Barang Inventaris</p>
-                </a>
-              </li>
-              <li class="nav-item">
-              <li class="nav-item">
-              @if($submenu == 'view_peminjaman_inv')
-                  <a href="/view_peminjaman_inv" class="nav-link active">
-                @else
-                  <a href="/view_peminjaman_inv" class="nav-link">
-                @endif
-                <i class="fas fa-dolly-flatbed nav-icon"></i>
-                  <p>Peminjaman Inventaris</p>
-                </a>
-              </li>
-            </ul>
-          </li>         
-          <li class="nav-item has-treeview menu-open">
-                @if($menu == 'kearsipan')
-                  <a href="#" class="nav-link active">
-                @else
-                  <a href="#" class="nav-link">
-                @endif
-                  <i class="fas fa-bars nav-icon"></i>
-              <p>
-                Kearsipan
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                    @if($submenu == 'arsip')
-                      <a href="/view_arsip" class="nav-link active">
-                    @else
-                      <a href="/view_arsip" class="nav-link">
-                    @endif
-                    <i class="fas fa-folder-open nav-icon"></i>
-                    <p>Arsip</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                @if($submenu == 'peminjaman_arsip')
-                      <a href="/view_peminjaman_arsip" class="nav-link active">
-                    @else
-                      <a href="/view_peminjaman_arsip" class="nav-link">
-                    @endif
-                    <i class="fas fa-archive nav-icon"></i>
-                    <p>Peminjaman Arsip</p>
-                  </a>
-                </li>
-              </ul>
-            </li>           -->
-      <!-- /.sidebar-menu -->
+              @if($submenu == 'pembayaran')
+              <a href="/pembayaran/viewKPR" class="nav-link active">
+              @else
+              <a href="/pembayaran/viewKPR" class="nav-link ">
+              @endif 
+                <i class="far fa-circle nav-icon"></i>
+                <p>KPR</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              @if($submenu == 'pembayaran2')
+              <a href="/pembayaran/viewCashBertahap" class="nav-link active">
+              @else
+              <a href="/pembayaran/viewCashBertahap" class="nav-link ">
+              @endif 
+                <i class="far fa-circle nav-icon"></i>
+                <p>Cash Bertahap</p>
+              </a>
+
+            </li>
+          </ul>
+      
+        </li>
+
+
     </div>
