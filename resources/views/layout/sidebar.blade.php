@@ -1,11 +1,11 @@
 <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
+        <!-- <div class="image">
           <img src="{{ asset('asset/dist/img/default-user-imge.jpeg') }}" class="img-circle elevation-2" alt="User Image">
-        </div>
+        </div> -->
         <div class="info">
-          <a href="#" class="d-block">Alexander</a>
+          <a href="#" class="d-block">Admin</a>
         </div>
       </div>
    
@@ -21,21 +21,7 @@
         </div>
       </div> -->
 
-      <!-- Sidebar Menu -->
-      <!-- <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <li class="nav-item">
-            @if($menu == 'dashboard')
-              <a href="/dashboard" class="nav-link active">
-            @else
-              <a href="/dashboard" class="nav-link">
-            @endif
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-              Dashboard
-              </p>
-            </a>
-          </li> -->
+      
 
           <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
