@@ -2,7 +2,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{ asset('asset/dist/img/default-user-imge.jpeg') }}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{ asset('asset/dist/img/avatar.png') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Alexander</a>
@@ -35,19 +35,21 @@
               Dashboard
               </p>
             </a>
-          </li>
-          <!-- <li class="nav-item has-treeview menu-open">
-            @if($menu == 'barang')
-              <a href="#" class="nav-link active">
+          </li> 
+          <li class="nav-item">
+            @if($menu == 'pemesanan')
+              <a href="/pemesanan/view_pemesanan" class="nav-link active">
             @else
-              <a href="#" class="nav-link">
-            @endif  
-            <i class="fas fa-bars nav-icon"></i>
+              <a href="/pemesanan/view_pemesanan" class="nav-link">
+            @endif
+                <!-- <i class="nav-icon fas fa-cart-shopping"></i> -->
+              <i class="nav-icon fas fa-solid fa-book"></i>
               <p>
-                Barang  
-                <i class="right fas fa-angle-left"></i>
+              Pemesanan
               </p>
             </a>
+          </li> 
+          <!-- 
             <ul class="nav nav-treeview">
               <li class="nav-item">
                 @if($submenu == 'view_barang')
