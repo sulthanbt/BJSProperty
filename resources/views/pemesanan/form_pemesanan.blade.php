@@ -29,7 +29,7 @@
     </div>
     <div class="card-body">
     <!-- <h1>Tambah Data Temuan</h1> -->
-      <form action="/pemesanan/form_pemesanan" method="post" enctype="multipart/form-data">
+      <form action="/pemesanan/tambah_pemesanan" method="post" enctype="multipart/form-data">
         <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
         Nama : <input type="text" class="form-control" name="nama"><br>
         Tempat & Tgl Lahir : <input type="date" class="form-control" name="ttl"><br>

@@ -22,6 +22,8 @@ Route::get('/', function () {
 Route::get('/', [DashboardController::class, 'index']);
 
 Route::get('/pemesanan/view_pemesanan', [PemesananController::class, 'index']);
-Route::get('/pemesanan/form_pemesanan', [PemesananController::class, 'insertpemesanan']);
-// Route::post('/pemesanan/form_pemesanan', [PemesananController::class, 'tambahpemesanan']);
-// Route::get('/pemesanan/hapus/{id_pemesanan}', [PemesananController::class, 'hapus']);
+Route::get('/pemesanan/form_pemesanan', [PemesananController::class, 'insertPemesanan']);
+Route::post('/pemesanan/tambah_pemesanan', [PemesananController::class, 'tambahPemesanan']);
+Route::get('/pemesanan/edit_pemesanan/{id_pemesanan}', [PemesananController::class, 'editPemesanan']);
+Route::post('/pemesanan/update_pemesanan', [PemesananController::class, 'updatePemesanan']);
+Route::get('/pemesanan/hapus/{id_pemesanan}', [PemesananController::class, 'hapus']);
