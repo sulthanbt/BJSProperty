@@ -1,11 +1,11 @@
 @extends("layout.mainlayout")
-@section("page_title","Inspektorat || Tambah OPD")
-@section("title","Data OPD")
+@section("page_title","Pemesanan")
+@section("title","Data Pemesanan")
 
 @section("breadcrumb")
 <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-<li class="breadcrumb-item"><a href="/opd">OPD</a></li>
-<li class="breadcrumb-item active">Tambah OPD</li> 
+<li class="breadcrumb-item"><a href="/pemesanan">Pemesanan</a></li>
+<li class="breadcrumb-item active">Tambah Pemesanan</li> 
 @endsection
 
 @section('custom_css')  
@@ -18,7 +18,7 @@
  <!-- Default box -->
  <div class="card">    
     <div class="card-header">
-        <h3 class="card-title">Tambah OPD</h3>
+        <h3 class="card-title">Tambah Pemesanan</h3>
 
         <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -29,11 +29,22 @@
     </div>
     <div class="card-body">
     <!-- <h1>Tambah Data Temuan</h1> -->
-      <form action="/opd/tambah_opd" method="post" enctype="multipart/form-data">
+      <form action="/pemesanan/form_pemesanan" method="post" enctype="multipart/form-data">
         <input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
-        Kode OPD : <input type="text" class="form-control" name="KODE_OPD"><br>
-        Nama OPD : <input type="text" class="form-control" name="NAMA_OPD"><br>
-       
+        Nama : <input type="text" class="form-control" name="nama"><br>
+        Tempat & Tgl Lahir : <input type="date" class="form-control" name="ttl"><br>
+        Pekerjaan : <input type="text" class="form-control" name="pekerjaan"><br>
+        Alamat Lengkap : <input type="text" class="form-control" name="alamat"><br>
+        Telepon : <input type="text" class="form-control" name="telp"><br>
+        HP : <input type="text" class="form-control" name="hp"><br>
+        Nomor Kavling : <input type="text" class="form-control" name="no_kavling"><br>
+        Type Rumah : <input type="text" class="form-control" name="type"><br>
+        Harga Standart : <input type="text" class="form-control" name="harga_standart"><br>
+        Harga Kelebihan Tanah : <input type="text" class="form-control" name="harga_kelebihan_tanah"><br>
+        Booking Fee : <input type="text" class="form-control" name="booking_fee"><br>
+        Uang Muka : <input type="text" class="form-control" name="uang_muka"><br>
+        KPR : <input type="text" class="form-control" name="kpr"><br>
+        Biaya Admin : <input type="text" class="form-control" name="biaya_admin"><br>
         <button type="submit" class="btn btn-primary">Simpan</button>
 
       </form>

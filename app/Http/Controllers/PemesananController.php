@@ -20,4 +20,18 @@ class PemesananController extends Controller
 
         return view('pemesanan/view_pemesanan',$data);
     }
+
+    public function insertPemesanan()
+    {
+        $pemesanan = DB::table('pemesanan')->get();
+        $data = array(
+            'menu' => 'barang',
+            'pemesanan' => $pemesanan,
+            
+            'submenu' => ''
+        );
+
+        return view('pemesanan/view_pemesanan',$data);  
+    }
+
 }

@@ -48,7 +48,7 @@
   <div class="card-body">
     <div class="card">
 			<div class="card-header">
-				<a href="/rencana_pengadaan/form_rencana_pengadaan">
+				<a href="/pemesanan/form_pemesanan">
 				<button type="button" class="btn btn-info float-right" style="float: right;"><i class="fas fa-plus"></i>  Tambah Data</button>
 				</a>
 			</div>
@@ -92,9 +92,12 @@
                   <td style="text-align:center">{{ $data->kpr }}</td>
                   <td style="text-align:center">{{ $data->biaya_admin }}</td>
                   <td>
+                  <a href='/pemesanan/edit_pemesanan/{{ $data->id_pemesanan }}'>
+                    <button type="button" class="btn btn-primary"><i class="fas fa-edit"></i> Edit</button>
+                    </a>
                   <button onclick="confirmDelete('{{ $data->id_pemesanan }}')" class="btn btn-danger">
                   <i class="fas fa-trash"></i> Hapus</button>
-                  </td>
+                  </td>     
               </tr>
           @endforeach
           </tbody>
@@ -112,6 +115,31 @@
   <!-- /.card-footer-->
 </div>
 <!-- /.card -->
+
+
+<!-- penomoran-otomatis -->
+<script type="text/javascript">
+var addNumeration = function(cl){
+  var table = document.querySelector('table.' + cl)
+  var trs = table.querySelectorAll('tr')
+  var counter = 1
+  
+  Array.prototype.forEach.call(trs, function(x,i){
+    var firstChild = x.children[0]
+    if (firstChild.tagName === 'TD') {
+      var cell = document.createElement('td')
+      cell.textContent = counter ++
+      x.insertBefore(cell,firstChild)
+    } else {
+      firstChild.setAttribute('colspan',1)
+    }
+  })
+}
+
+addNumeration("table")
+</script>
+<!-- /.penomoran-otomatis -->
+
 
 <div class="modal fade" id="deletepemesanan" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
