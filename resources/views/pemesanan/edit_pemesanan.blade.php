@@ -24,7 +24,7 @@
 	</div>
 	<div class="card-body">
 
-		<form action="/pemesanan/update_pemesanan" method="post">  
+		<form action="/pemesanan/update_pemesanan" method="post" enctype="multipart/form-data">  
 			<input type = "hidden" name = "_token" value = "<?php echo csrf_token() ?>">
             Nama : <input type="text" class="form-control" name="nama" value="{{$pemesanan[0]->nama}}"><br>
             Tempat & Tgl Lahir : <input type="date" class="form-control" name="ttl" value="{{$pemesanan[0]->ttl}}"><br>
