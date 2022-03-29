@@ -40,6 +40,20 @@
           </a>
         </li>
 
+        <li class="nav-item">
+              @if($menu == 'pemesanan')
+              <a href="/view_pemesanan" class="nav-link active">
+              @else
+              <a href="/view_pemesanan" class="nav-link">
+              @endif
+              <i class="nav-icon fas fa-users"></i>
+                <p>
+                  Pemesanan
+                </p>
+              </a>
+            </li>
+
+
         @if($menu == 'Pembayaran')
         <li class="nav-item has-treeview menu-open">
           <a href="#" class="nav-link active">
